@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Cards from "./Components/Cards/cards";
+import Cards from "./Components/Cards/Cards";
 import Filters from "./Components/Filters/Filters";
+import Pagination from './Components/Pagination/Pagination';
 
 
 
 function App() {
-  let [pageNumber, setPageNumber] = useState(5);
+  let [pageNumber, setPageNumber] = useState(1);
+
+  console.log(pageNumber);
   let [fetchedData, updateFetchedData] = useState([]);
   let { info, results } = fetchedData;
 
@@ -43,6 +46,8 @@ function App() {
         </div>
 
       </div>
+
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
       
     </div>
   );
