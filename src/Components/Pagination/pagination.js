@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactPaginate from 'react-paginate'
 
 const pagination = ({ pageNumber, setPageNumber }) => {
     let next = () => {
