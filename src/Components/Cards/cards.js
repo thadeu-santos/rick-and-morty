@@ -39,7 +39,7 @@ const Cards = ({ results }) => {
                             </div>
                             );
                         };
-                    })()};
+                    })()}
                 
                 </div>
             );
